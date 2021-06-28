@@ -17,6 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('blog/', include('jaguaretecommerce.urls')), # blog/ apunta al url configurado con ese NAME dentro de APP/urls.py
+    path('blog/', include('apps.jaguaretecommerce.urls')), # blog/ apunta al url configurado con ese NAME dentro de APP/urls.py
     path('admin/', admin.site.urls),
 ]
