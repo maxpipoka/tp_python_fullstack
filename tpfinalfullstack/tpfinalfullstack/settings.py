@@ -55,7 +55,7 @@ ROOT_URLCONF = 'tpfinalfullstack.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
