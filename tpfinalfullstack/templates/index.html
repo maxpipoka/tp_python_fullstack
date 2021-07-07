@@ -6,32 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 
     <title>Jaguatere Commerce</title>
 </head>
 
 <body>
     <header class="main-header">
-        <div class="container">
-            <div class="main-header__container">
-                <img src="assets/logo_empresa.svg" alt="Jaguarete Commerce">
-                <span class="bi bi-menu-button-wide-fill"></span>
+        <div class="logo block flex flex-col items-center max-w-full">
+            <div class="main-header__container flex shadow-lg max-w-full">
+                <div class="flex w-auto"><img class="h-12 w-24" src="assets/logo_empresa.svg" alt="Jaguarete Commerce"></div>
+                <span class="fas fa-bars"></span>
             </div>
             <div class="main-header__container">
-                <a class="main-header__link" href=""><i class="bi bi-person-fill"></i> Login</a>
+                <div><a class="main-header__link" href=""><i class="fas fa-user"></i></i> Login</a></div>
+                <div><a href="" class="main-header__link"><i class="fas fa-sign-in-alt"></i> Registrarse</a></div>
+                <div><a href="" class="main-header__link__cart"><i class="fas fa-shopping-cart"></i> Carrito</a></div>
             </div>
             <div class="main-header__container">
-                <a href="" class="main-header__link"><i class="bi bi-triangle-fill"></i> Registrarse</a>
-            </div>
-            <div class="main-heater__container">
-                <a href="" class="main-header__link__cart"><i class="bi bi-cart-fill"></i></i> Carrito</a>
-            </div>
-            <div class="main-header__search"><input type="search" name="" id="">
-                <spam class="bi bi-search"></spam>
+                <input type="search" name="" id="" placeholder="Buscar productos">
+                <spam class="fas fa-search"></spam>
             </div>
         </div>
-
     </header>
+    
 </body>
 
 </html>

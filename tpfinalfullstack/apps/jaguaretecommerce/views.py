@@ -5,3 +5,6 @@ from django.shortcuts import render, HttpResponse
 
 def blog(request):
     return HttpResponse("Texto plano")
+
+def inicio(request):
+    return render(request, 'index.html')
