@@ -35,7 +35,7 @@
             {% for product in products%}
             <div>
                 <p>{{product.titulo}}</p>
-                <img src="{{MEDIA_URL}}{{product.imagen}}" alt="{{product.titulo}}">
+                <img src="{{product.imagen.url}}" alt="{{product.titulo}}">
                 <p>{{product.cateroriaPertenece}}</p>
                 <p>{{product.descripcion}}</p>
                 <p>{{product.precio}}</p>
