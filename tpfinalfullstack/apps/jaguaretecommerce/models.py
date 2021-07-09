@@ -7,18 +7,18 @@ class Categoria(models.Model):
     descripcion = models.TextField()
 
     def __str__(self):
-        return (self.id, self.nombre)
+        return f'{self.id} - {self.nombre}'
     
 
 class Producto(models.Model):
     titulo = models.CharField(max_length = 40)
-    imagen = models.ImageField(upload_to=)
+    imagen = models.ImageField(upload_to='products', default='product_blank.png')
     descripcion = models.TextField()
     precio = models.DecimalField(max_digits=10, decimal_places=2)
     categoriaPertenece = models.ForeignKey(Categoria, on_delete=models.PROTECT)
 
     def __str__(self):
-        return (self.id, self.titulo)
+        return f'{self.id} - {self.titulo}'
     
 
 
@@ -31,7 +31,7 @@ class Usuario(models.Model):
     direccion = models.TextField()
 
     def __str__(self):
-        return (self.email, self.nombreUsuario)
+        return f'{self.email} - {self.nombreUsuario}'
     
 
 
@@ -41,7 +41,7 @@ class Carrito(models.Model):
     totalCarrito = models.CharField(max_length=10)
 
     def __str__(self):
-        return (self.id, self.cliente, self.totalCarrito)
+        return f'{self.id} - {self.cliente} - {self.totalCarrito}'
     
 
 
@@ -50,5 +50,5 @@ class Admin(models.Model):
     fechaAlta = models.DateField()
 
     def __str__(self):
-        return (self.id, self.userAdmin)
+        return f'{self.id} - {self.userAdmin}'
     

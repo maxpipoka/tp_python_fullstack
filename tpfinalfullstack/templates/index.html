@@ -15,7 +15,7 @@
     <header class="main-header">
         <div class="logo block flex flex-col items-center max-w-full">
             <div class="main-header__container flex shadow-lg max-w-full">
-                <div class="flex w-auto"><img class="h-12 w-24" src="assets/logo_empresa.svg" alt="Jaguarete Commerce"></div>
+                <div class="flex w-auto"><img class="h-12 w-24" src="./assets/logo_empresa.svg" alt="Jaguarete Commerce"></div>
                 <span class="fas fa-bars"></span>
             </div>
             <div class="main-header__container">
@@ -29,7 +29,21 @@
             </div>
         </div>
     </header>
-    
+    <div>
+        <h2>Nuevos Productos</h2>
+        <div class="listarNuevosProductos">
+            {% for product in products%}
+            <div>
+                <p>{{product.titulo}}</p>
+                <img src="{{MEDIA_ROOT}}{{product.imagen}}" alt="{{product.titulo}}">
+                <p>{{product.cateroriaPertenece}}</p>
+                <p>{{product.descripcion}}</p>
+                <p>{{product.precio}}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
 </body>
 
 </html>

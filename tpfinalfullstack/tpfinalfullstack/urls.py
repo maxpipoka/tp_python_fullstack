@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from apps.jaguaretecommerce.views import inicio
+from django.conf import settings
+from django.conf.urls.static import static
+from apps.jaguaretecommerce.views import index
 
 urlpatterns = [
-    path('blog/', include('apps.jaguaretecommerce.urls')), # blog/ apunta al url configurado con ese NAME dentro de APP/urls.py
+    # path('blog/', include('apps.jaguaretecommerce.urls')), # blog/ apunta al url configurado con ese NAME dentro de APP/urls.py
     path('admin/', admin.site.urls),
-    path('', inicio, name= 'index') #Index del sitio web
-]
+    path('', index, name= 'index') #Index del sitio web
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
