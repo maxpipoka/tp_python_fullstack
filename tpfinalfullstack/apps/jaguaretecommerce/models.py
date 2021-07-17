@@ -37,7 +37,7 @@ class Usuario(models.Model):
 
 class Carrito(models.Model):
     cliente = models.ForeignKey(Usuario, on_delete=models.PROTECT) 
-    listaProductos = models.ManyToManyField(Producto)
+    listaProductos = models.ForeignKey(Producto, null=True, on_delete=models.PROTECT)
     totalCarrito = models.CharField(max_length=10)
 
     def __str__(self):

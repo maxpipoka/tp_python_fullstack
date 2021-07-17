@@ -5,5 +5,8 @@ from .models import Categoria, Producto, Carrito, Usuario, Admin
 
 admin.site.register(Categoria)
 admin.site.register(Producto)
+admin.site.register(Carrito)
+admin.site.register(Usuario)
+admin.site.register(Admin)
 
 
